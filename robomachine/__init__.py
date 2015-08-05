@@ -40,7 +40,7 @@ def _write_tests(machine, max_tests, max_actions, to_state, output, strategy_cla
             continue
         else:
             generated_tests.add((tuple(test), tuple(values)))
-        _write_test('Test %d' % i, machine, output, test, values)
+        _write_test('Test %s' % '_'.join(values), machine, output, test, values)
         i += 1
 
 def generate(machine, max_tests=1000, max_actions=None, to_state=None, output=None, strategy=DepthFirstSearchStrategy):
