@@ -39,8 +39,7 @@ robo_step.leaveWhitespace()
 robo_step = robo_step.setResultsName('robo_step')
 
 variable = Regex(Variable.REGEX)
-
-variable_value = Regex(r'[\w\$\{\}!?\-\=\_\.\/]+( [\w\$\{\}!?\-\=\_\.\/]+)*')
+variable_value = Regex(r'[\w\$\{\}!?\-\=\_\.\/\&\[\]]+( [\w\$\{\}!?\-\=\_\.\/\&\[\]]+)*')
 
 splitter = Literal(' ')+OneOrMore(' ')
 splitter.setParseAction(lambda t: '  ')
